@@ -29,7 +29,7 @@ echo "Lingua preferita: " . $lang . "<br>"; // Debug
 
 // Funzione per ottenere il testo tradotto
 function translate($conn, $lang, $key) {
-    $query = "SELECT $lang FROM translations WHERE `key` = '$key'";
+    $query = "SELECT $lang FROM translations WHERE `key_name` = '$key'";
     echo "Query di traduzione: " . $query . "<br>"; // Debug
     $result = $conn->query($query);
     if ($result->num_rows > 0) {
